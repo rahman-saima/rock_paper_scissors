@@ -1,0 +1,190 @@
+#include <iostream>
+#include <stdlib.h>
+
+int main(){
+
+  // This prgram will create the Rock, Paper, Scissors, Lizard, Spock with a given user.
+
+  srand(time(NULL));
+
+  int computer1 = rand() % 3 + 1;
+  int computer2 = rand() % 3 + 1;
+  int computer3 = rand() % 3 + 1;
+
+
+  int computerWins =0;
+  int userWins = 0;
+
+  //1 = rock
+  //2 = paper
+  //3 = scissor
+
+  int round1 = 0;
+  int round2 = 0;
+  int round3 = 0;
+
+  std::cout << "===================\n";
+  std::cout << "rock paper scissors!\n";
+  std::cout << "===================\n";
+
+  std::cout << "shoot!  \n";
+
+  std::cout << "What will you be selecting? *Please respond with the number '1' for rock , '2' for paper, and '3' for scissors* \n";
+
+  std::cin >> round1;
+
+  std::cout << "Round one!\n" << "\n";
+
+  if(round1 == 1){
+    if(computer1 == 1){
+      std::cout << "Rock! This looks like a draw! Play again!";
+    }
+    else if(computer1 == 2){
+      std::cout << "Paper! Look's like you lose!";
+      computerWins++;
+    }
+    else if(computer1 == 3){
+      std::cout << "Scissors! Aw man, I guess you win this round!";
+      userWins++;
+    }
+  }
+
+  if(round1 == 2){
+    if(computer1 == 2){
+      std::cout << "Paper! This looks like a draw! Play again!";
+    }
+    else if(computer1 == 3){
+      std::cout << "Scissors! Look's like you lose!";
+      computerWins++;
+    }
+    else if(computer1 == 1){
+      std::cout << "Rock! Aw man, I guess you win this round!";
+      userWins++;
+    }
+  }
+
+  if(round1 == 3){
+    if(computer1 == 3){
+      std::cout << "Scissors! This looks like a draw! Play again!";
+    }
+    else if(computer1 == 1){
+      std::cout << "Rock! Look's like you lose!";
+      computerWins++;
+    }
+    else if(computer1 == 2){
+      std::cout << "Paper! Aw man, I guess you win this round!";
+      userWins++;
+    }
+  }
+
+
+  std::cout << "\nRound 2! \n";
+
+  std::cout << "What will you be selecting? *Please respond with the number '1' for rock , '2' for paper, and '3' for scissors* \n";
+
+  std::cin >> round2;
+
+  if(round2 == 1){
+    if(computer2 == 1){
+      std::cout << "Rock! This looks like a draw! Play again!";
+    }
+    else if(computer2 == 2){
+      std::cout << "Paper! Look's like you lose!";
+      computerWins++;
+    }
+    else if(computer2 == 3){
+      std::cout << "Scissors! Aw man, I guess you win this round!";
+      userWins++;
+    }
+  }
+
+  if(round2 == 2){
+    if(computer2 == 2){
+      std::cout << "Paper! This looks like a draw! Play again!";
+    }
+    else if(computer2 == 3){
+      std::cout << "Scissors! Look's like you lose!";
+      computerWins++;
+    }
+    else if(computer2 == 1){
+      std::cout << "Rock! Aw man, I guess you win this round!";
+      userWins++;
+    }
+  }
+
+  if(round2 == 3){
+    if(computer2 == 3){
+      std::cout << "Scissors! This looks like a draw! Play again!";
+    }
+    else if(computer2 == 1){
+      std::cout << "Rock! Look's like you lose!";
+      computerWins++;
+    }
+    else if(computer2 == 2){
+      std::cout << "Paper! Aw man, I guess you win this round!";
+      userWins++;
+    }
+  }
+
+  std::cout << "\nRound 3! \n";
+
+  std::cout << "What will you be selecting? *Please respond with the number '1' for rock , '2' for paper, and '3' for scissors* \n";
+
+  std::cin >> round3;
+
+  if(round3 == 1){
+    if(computer3 == 1){
+      std::cout << "Rock! This looks like a draw! Play again!";
+    }
+    else if(computer3 == 2){
+      std::cout << "Paper! Look's like you lose!";
+      computerWins++;
+    }
+    else if(computer3 == 3){
+      std::cout << "Scissors! Aw man, I guess you win this round!";
+      userWins++;
+    }
+  }
+
+  if(round3 == 2){
+    if(computer3 == 2){
+      std::cout << "Paper! This looks like a draw! Play again!";
+    }
+    else if(computer3 == 3){
+      std::cout << "Scissors! Look's like you lose!";
+      computerWins++;
+    }
+    else if(computer3 == 1){
+      std::cout << "Rock! Aw man, I guess you win this round!";
+      userWins++;
+    }
+  }
+
+  if(round3 == 3){
+    if(computer3 == 3){
+      std::cout << "Scissors! This looks like a draw! Play again!";
+    }
+    else if(computer3 == 1){
+      std::cout << "Rock! Look's like you lose!";
+      computerWins++;
+    }
+    else if(computer3 == 2){
+      std::cout << "Paper! Aw man, I guess you win this round!";
+      userWins++;
+    }
+  }
+
+  if(userWins > computerWins){
+    std::cout << "\n" << "\nCongrats you're the winner!\n";
+  }
+  else if(userWins < computerWins){
+    std::cout <<"\n" << "\nLook's like I beat you! Better luck next time! :) \n";
+  }
+  else{
+    std::cout << "\n" << "\nLooks like there is no clear winner! Play again! \n";
+  }
+
+
+
+
+}
